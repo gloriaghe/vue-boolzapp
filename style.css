@@ -145,6 +145,7 @@
 #chatAperta{
     height: calc(100% - 140px);
 }
+
 #nomeChatAperta{
     width: 80%;
 }
@@ -167,19 +168,18 @@
 
 
 .active{
-background-color: #d3effc;
+    background-color: #d3effc;
     }
 
 .msg{
     border-radius: 20px;
-    margin: 30px 0;
+    margin: 30px 30px;
     padding: 20px;
-}
-
-.msgRicevuti{
     background-color: white;
 }
 
+
 .msgInviati{
     background-color: #d5f9ba;
+    align-self: flex-end;
 }

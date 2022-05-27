@@ -3,6 +3,7 @@ var Boolzapp = new Vue ({
     data:{ 
         lastMessages : "",
         activeContact: 0,
+        currentContact : {},
         contacts: [
             {
                 name: 'Batman',
@@ -170,7 +171,7 @@ var Boolzapp = new Vue ({
         
 
     },
-    
+
     created(){
     }, 
 
@@ -178,6 +179,8 @@ var Boolzapp = new Vue ({
         //collegare chat aperta
         activeClick(attivaMsg){
             this.activeContact = attivaMsg;
+            // this.currentContact = this.contacts[attivaMsg];
+           
         },
     }
 });

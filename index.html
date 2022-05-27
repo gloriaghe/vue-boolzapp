@@ -75,10 +75,10 @@
                                 </div>
                             </div>
                             <div id="chatAperta" >
-                                <div class="row d-flex justify-content-around">
-                                    <div class="msgRicevuti msg col-4">ciao</div><br>
-                                    <div class="msgInviati msg col-4">ciao</div>
-                                    <div>{{contacts[activeContact].messages}}</div>
+                                <div class="row d-flex flex-column">
+                                
+                                    <div v-for="message in contacts[activeContact].messages" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">{{message.message}}</div> 
+                                    <!-- <div v-for="message in currentContact.messages">{{message.message}}</div> -->
                                 </div>
                                 
                             </div>
