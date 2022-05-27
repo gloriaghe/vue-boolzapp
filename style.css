@@ -37,6 +37,9 @@
     height: 70px;
     cursor: pointer;
  }
+ #avatar h4{
+    margin-left: 20px;
+ }
 
  #avatar:first-child div {
     display: flex;
@@ -45,9 +48,9 @@
  }
 
  #iconAvatar i{
-     cursor: pointer;
-     color: #b1b1b1;
-    margin-right: 20PX;
+    cursor: pointer;
+    color: #b1b1b1;
+    margin-right: 20px;
     font-size: 22px;
  }
 
@@ -87,6 +90,7 @@
 .avatarContatto, .nameMsg {
     float: left;
 }
+
 .nameMsg {
     margin-left: 20px;
 }
@@ -139,7 +143,8 @@
     background-color: white;
     height: 70px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #chatAperta{
@@ -147,8 +152,23 @@
 }
 
 #nomeChatAperta{
-    width: 80%;
+    min-width: 50%;
+    margin-left: 20px;
 }
+
+#iconChatAperta .fas{
+    cursor: pointer;
+    color: #b1b1b1;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+
+#iconChatAperta img{
+    color: #b1b1b1;
+    width: 20px;
+}
+
 #rispondi{
     height: 70px;
     background-color: white;
@@ -173,13 +193,20 @@
 
 .msg{
     border-radius: 20px;
-    margin: 30px 30px;
+    margin: 20px 30px;
     padding: 20px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
-
 
 .msgInviati{
     background-color: #d5f9ba;
     align-self: flex-end;
+
+}#chatAperta span {
+    color: #b1b1b1;
+    font-size: 10px;
+    align-self: flex-end;
+    margin-top: 10px;
 }

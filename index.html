@@ -48,9 +48,8 @@
                                                 <img :src="element.avatar" :alt="element.name" class="avatarContatto">
                                                 <div class="nameMsg">
                                                     <h4 class="name">{{element.name}}</h2>
-                                                    <span v-for="element in element.messages" class="last-msg">
-                                                       
-                                                        <!-- {{element.message}} -->
+                                                    <span v-for="element in element.messages" class="last-msg">   
+                                                    <!-- {{element.message}} -->
                                                     </span>
                                                 </div>
                                                 <span class="orario-msg">12.00</span>        
@@ -67,17 +66,18 @@
                                     <span>Ultimo accesso oggi alle</span>
                                 </div>
                                 <div id="iconChatAperta">
-                                    
-                                    <img src="../img/lens.svg" alt="">
+                                    <i class="fas fa-search"></i>
                                     <i class="fas fa-paperclip"></i>
                                     <i class="fas fa-ellipsis-v"></i>
-
                                 </div>
                             </div>
                             <div id="chatAperta" >
                                 <div class="row d-flex flex-column">
                                 
-                                    <div v-for="message in contacts[activeContact].messages" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">{{message.message}}</div> 
+                                    <div v-for="message in contacts[activeContact].messages" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
+                                        <div>{{message.message}}</div>
+                                        <span>{{message.date}}</span>
+                                    </div> 
                                     <!-- <div v-for="message in currentContact.messages">{{message.message}}</div> -->
                                 </div>
                                 

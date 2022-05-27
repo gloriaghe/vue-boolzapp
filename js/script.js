@@ -12,23 +12,23 @@ var Boolzapp = new Vue ({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Hai portato a spasso il cane di Catwoman?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Ricordati di arrestare Pinguino stasera!!!',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
+                        message: 'Tutto fatto! Gotham City è al sicuro anche oggi',
                         status: 'received'
                     }
                 ],
             },
             {
-                name: 'CapitanAmerica',
+                name: 'Capitan America',
                 avatar: 'img/CapitanAmerica.jpg',
                 visible: true,
                 messages: [
@@ -44,7 +44,7 @@ var Boolzapp = new Vue ({
                     },
                     {
                         date: '20/03/2020 16:35:00',
-                        message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        message: 'Mi piacerebbe ma devo andare a sconfiggere il crimine.',
                         status: 'sent'
                     }
                 ],
@@ -56,17 +56,17 @@ var Boolzapp = new Vue ({
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
-                        message: 'La Marianna va in campagna',
+                        message: 'Stasera si esce?',
                         status: 'received'
                     },
                     {
                         date: '28/03/2020 10:20:10',
-                        message: 'Sicuro di non aver sbagliato chat?',
+                        message: 'Volentieri... Invitiamo anche gli altri?',
                         status: 'sent'
                     },
                     {
                         date: '28/03/2020 16:15:22',
-                        message: 'Ah scusa!',
+                        message: 'Si, basta non venga IronMan che non lo sopporto!',
                         status: 'received'
                     }
                 ],
@@ -78,12 +78,12 @@ var Boolzapp = new Vue ({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Stasera giretto?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'No, corri troppo!',
                         status: 'received'
                     }
                 ],
@@ -95,12 +95,12 @@ var Boolzapp = new Vue ({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Ricordati di chiamare la nonna',
+                        message: 'Ricordati di chiamare Batman...',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Va bene, stasera la sento',
+                        message: 'Va bene! Stasera comunque ci si vede alla base.',
                         status: 'received'
                     }
                 ],
@@ -112,17 +112,17 @@ var Boolzapp = new Vue ({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Ciao Claudia, hai novità?',
+                        message: 'Ciao stasera vedi gli altri?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Non ancora',
+                        message: 'Si, alle 20.00 nella fortezza di Superman',
                         status: 'received'
                     },
                     {
                         date: '10/01/2020 15:51:00',
-                        message: 'Nessuna nuova, buona nuova',
+                        message: 'Perfetto!',
                         status: 'sent'
                     }
                 ],
@@ -134,12 +134,12 @@ var Boolzapp = new Vue ({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                        message: 'Tutto bene durante la battaglia?!',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                        message: 'Certo, non mi batte nessuno!',
                         status: 'received'
                     }
                 ],
@@ -151,17 +151,17 @@ var Boolzapp = new Vue ({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Ciao, andiamo a mangiare la pizza stasera?',
+                        message: 'Hey, che si dice?',
                         status: 'received'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                        message: 'Niente di che... anche stavolta ci hanno provato con la criptonite',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:51:00',
-                        message: 'OK!!',
+                        message: 'Va beh dai... Ormai sei abituato!!',
                         status: 'received'
                     }
                 ],
