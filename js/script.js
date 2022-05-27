@@ -170,9 +170,12 @@ var Boolzapp = new Vue ({
         
 
     },
+    
     created(){
     }, 
+
     methods:{
+        //collegare chat aperta
         activeClick(attivaMsg){
             this.activeContact = attivaMsg;
         },
