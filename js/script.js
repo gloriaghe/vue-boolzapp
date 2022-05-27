@@ -1,6 +1,7 @@
 var Boolzapp = new Vue ({
     el: '#container',
     data:{ 
+        lastMessages : "",
         contacts: [
             {
                 name: 'Batman',
@@ -168,7 +169,8 @@ var Boolzapp = new Vue ({
         
 
     },
-    
+    created(){
+    }, 
     methods:{
         
     }
