@@ -23,7 +23,8 @@
 
  /* avatar utente  e contatti*/
  .contatto img,
- #avatar img{
+ #avatar img,
+ #contattoChatAperta img{
      background-color: white;
      width: 70px;
      height: 70px;
@@ -34,6 +35,7 @@
     display: flex;
     justify-content: space-between;
     height: 70px;
+    cursor: pointer;
  }
 
  #avatar:first-child div {
@@ -42,18 +44,28 @@
     align-items: center;
  }
 
-
  #iconAvatar i{
      cursor: pointer;
      color: #b1b1b1;
     margin-right: 20PX;
     font-size: 22px;
  }
+
 /* cerca */
 #cercaContatto{
     width: 95%;
     border: none;
     height: 50px;
+    background-image: url(../img/lens.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position:  10px;
+    text-align: center;
+}
+
+#cercaContatto:focus {
+    background-image: none;
+    
 }
 
  /* contatti */
@@ -64,14 +76,26 @@
 .contatto{
     height:70px;
     border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
+}
+
+.contatto:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.avatarContatto, .nameMsg {
+    float: left;
+}
+.nameMsg {
+    margin-left: 20px;
 }
 
 .contatto .orario-msg{
     color: #b1b1b1;
     font-size: 12px;
     margin-right: 10px;
+    float: right;
 }
 
 /* notifiche */
@@ -110,3 +134,38 @@
     background-image: url(img/sfondo.jpg);
     background-size: cover;
 }
+
+#contattoChatAperta{
+    background-color: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#chatAperta{
+    height: calc(100% - 140px);
+}
+#nomeChatAperta{
+    width: 80%;
+}
+#rispondi{
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#rispondi input {
+    width: 80%;
+    border: none;
+}
+
+#rispondi .fas {
+    color: #6b7376;
+    font-size: 20px;}
+
+
+.active{
+
+    }

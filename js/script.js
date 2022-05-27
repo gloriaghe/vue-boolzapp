@@ -2,6 +2,7 @@ var Boolzapp = new Vue ({
     el: '#container',
     data:{ 
         lastMessages : "",
+        activeContact: 0,
         contacts: [
             {
                 name: 'Batman',
@@ -172,6 +173,8 @@ var Boolzapp = new Vue ({
     created(){
     }, 
     methods:{
-        
+        activeClick(attivaMsg){
+            this.activeContact = attivaMsg;
+        },
     }
 });

@@ -44,25 +44,43 @@
                             <div class="row" id="listaContatti">
                                 <div class="d-flex flex-column">
 
-                                    <div class="contatto" v-for="(element, key, i) in contacts" :id="key" :key="key">
-                                        <img :src="element.avatar" :alt="element.name" class="avatarContatto">
-                                        <div class="nameMsg">
-                                            <h4 class="name">{{element.name}}</h2>
-                                            <span v-for="element in element.messages" class="last-msg">
-                                               
-                                                <!-- {{element.message}} -->
-                                            </span>
-                                        </div>
-                                        <span class="orario-msg">12.00</span>
-        
+                                    <div class="contatto" v-for="(element, key, i) in contacts" @click="activeClick(key)" :class="key === activeContact ? 'active' : '' " :id="key" :key="key">
+                                                <img :src="element.avatar" :alt="element.name" class="avatarContatto">
+                                                <div class="nameMsg">
+                                                    <h4 class="name">{{element.name}}</h2>
+                                                    <span v-for="element in element.messages" class="last-msg">
+                                                       
+                                                        <!-- {{element.message}} -->
+                                                    </span>
+                                                </div>
+                                                <span class="orario-msg">12.00</span>        
                                     </div>
                                 </div>
                             </div>
                             
                         </section>
                         <section id="messaggi" class="col-7">
+                            <div id="contattoChatAperta">
+                                <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
+                                <div id="nomeChatAperta">
+                                    <h4>{{contacts[activeContact].name}}</h4>
+                                    <span>Ultimo accesso oggi alle</span>
+                                </div>
+                                <div id="iconChatAperta">
+                                    
+                                    <img src="../img/lens.svg" alt="">
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+
+                                </div>
+                            </div>
                             <div id="chatAperta">
 
+                            </div>
+                            <div id="rispondi">
+                                <i class="fas fa-smile"></i>
+                                <input type="text" placeholder="Scrivi un messaggio">
+                                <i class="fas fa-microphone"></i>
                             </div>
         
                         </section>
