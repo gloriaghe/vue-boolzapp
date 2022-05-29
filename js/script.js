@@ -1,11 +1,12 @@
 var Boolzapp = new Vue ({
-    el: '#container',
-    data:{ 
+    el: '#containerApp',
+    data:{
         lastMessages : "",
         activeContact: 0,
         currentContact : {},
         newMessaggio: "",
         newMess: {},
+        cercaAmico: "",
         contacts: [
             {
                 name: 'Batman',
@@ -181,7 +182,7 @@ var Boolzapp = new Vue ({
         activeClick(attivaMsg){
             this.activeContact = attivaMsg;
             // this.currentContact = this.contacts[attivaMsg];
-           
+
         },
 
          // aggiunta messaggio
@@ -204,7 +205,24 @@ var Boolzapp = new Vue ({
                       this.contacts[this.activeContact].messages.push(risposta);
                   },1000)
              }
+        },
+
+        cercaPerLettera () {
+            // console.log(this.contacts[1].name);
+            let cErCaAmIcO = this.cercaAmico.toUpperCase();
+
+            this.contacts.filter((element) =>{
+               if(element.name.toUpperCase().includes(cErCaAmIcO) === false){
+                this.contacts.splice(element, 1)
+                
+                //    console.log(element.name.toUpperCase().includes(cErCaAmIcO))
+                //    console.log(this.cercaAmico.toUpperCase())
+                   
+               } else {
+                   
+               }
+           })
         }
     },
-    
+
 });
