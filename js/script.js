@@ -4,6 +4,7 @@ var Boolzapp = new Vue ({
         lastMessages : "",
         activeContact: 0,
         currentContact : {},
+        newMessaggio: "",
         contacts: [
             {
                 name: 'Batman',
@@ -182,5 +183,23 @@ var Boolzapp = new Vue ({
             // this.currentContact = this.contacts[attivaMsg];
            
         },
-    }
+
+        // aggiunta messaggio
+        messAdd (){
+            class newMess {
+                constructor (message, date, state){
+                    this.message = message;
+                    this.date = date;
+                    this.state = state;
+                }
+            };
+            if(this.newMessaggio.trim() !== ""){
+                let nuovo = new newMess(this.newMessaggio.trim(), "29 maggio 21.00", "sent");
+                this.contacts.push(nuovo);
+                this.newMessaggio = "";
+                console.log(newMess)
+            }
+        }
+    },
+    
 });

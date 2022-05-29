@@ -13,7 +13,6 @@
 </head>
 <body>
     <div id="container">
-        <div id="header-green"></div>
         <div class="container-fluid">
         
             <!-- section messaggistica -->
@@ -84,7 +83,7 @@
                             </div>
                             <div id="rispondi">
                                 <i class="fas fa-smile"></i>
-                                <input type="text" placeholder="Scrivi un messaggio">
+                                <input type="text" @keyup.enter="messAdd" placeholder="Scrivi un messaggio">
                                 <i class="fas fa-microphone"></i>
                             </div>
         

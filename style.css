@@ -1,27 +1,26 @@
 #container {
     width: 100vw;
     height: 100vh;
-    background-color: #dadbd3;
+    background-image: linear-gradient(to right, #007468, #06ffe6 );
+    background-color: #06ffe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#header-green {
-    height: 140px;
-    width: 100vw;
-    background-color: #009688;
-}
 
 #app {
     margin: 0 auto;
-    width: 80%;
+    max-width: 80%;
     max-height: 90%;
     background-color: white;
     z-index: 100;
-    margin-top: -100px;
 }
 
 /* section messaggistica */
 
  /* avatar utente  e contatti*/
+
  .contatto img,
  #avatar img,
  #contattoChatAperta img{
@@ -74,6 +73,7 @@
  /* contatti */
  #listaContatti > div{
     overflow: auto;
+    height:calc(100% - 200px);
  }
 
 .contatto{
@@ -149,6 +149,8 @@
 
 #chatAperta{
     height: calc(100% - 140px);
+    overflow: auto;
+
 }
 
 #nomeChatAperta{
