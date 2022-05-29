@@ -5,6 +5,7 @@ var Boolzapp = new Vue ({
         activeContact: 0,
         currentContact : {},
         newMessaggio: "",
+        newMess: {},
         contacts: [
             {
                 name: 'Batman',
@@ -67,7 +68,7 @@ var Boolzapp = new Vue ({
                     },
                     {
                         date: '28/03/2020 16:15:22',
-                        message: 'Si, basta non venga IronMan che non lo sopporto!',
+                        message: 'Si, basta non venga Iron Man che non lo sopporto!',
                         status: 'received'
                     }
                 ],
@@ -80,11 +81,16 @@ var Boolzapp = new Vue ({
                     {
                         date: '10/01/2020 15:30:55',
                         message: 'Stasera giretto?',
-                        status: 'sent'
+                        status: 'received'
                     },
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'No, corri troppo!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Ahahahaha!',
                         status: 'received'
                     }
                 ],
@@ -153,28 +159,22 @@ var Boolzapp = new Vue ({
                     {
                         date: '10/01/2020 15:30:55',
                         message: 'Hey, che si dice?',
-                        status: 'received'
+                        status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'Niente di che... anche stavolta ci hanno provato con la criptonite',
-                        status: 'sent'
+                        status: 'received'
                     },
                     {
                         date: '10/01/2020 15:51:00',
                         message: 'Va beh dai... Ormai sei abituato!!',
-                        status: 'received'
+                        status: 'sent'
                     }
                 ],
             }
         ],
-        
-        
-
     },
-
-    created(){
-    }, 
 
     methods:{
         //collegare chat aperta
@@ -184,21 +184,26 @@ var Boolzapp = new Vue ({
            
         },
 
-        // aggiunta messaggio
-        messAdd (){
+         // aggiunta messaggio
+         messAdd (){
             class newMess {
-                constructor (message, date, state){
-                    this.message = message;
+                constructor (message, date, status){
                     this.date = date;
-                    this.state = state;
+                    this.message = message;
+                    this.status = status;
+
                 }
             };
-            if(this.newMessaggio.trim() !== ""){
-                let nuovo = new newMess(this.newMessaggio.trim(), "29 maggio 21.00", "sent");
-                this.contacts.push(nuovo);
-                this.newMessaggio = "";
-                console.log(newMess)
-            }
+             if(this.newMessaggio.trim() !== ""){
+                  let nuovo = new newMess(this.newMessaggio.trim(), "29 maggio 21.00", "sent");
+                  this.contacts[this.activeContact].messages.push(nuovo);
+                  this.newMessaggio = "";
+                  setTimeout(( )=>{
+
+                      let risposta = new newMess("Ok", "29 maggio 21.00", "received");
+                      this.contacts[this.activeContact].messages.push(risposta);
+                  },1000)
+             }
         }
     },
     
