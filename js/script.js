@@ -50,7 +50,12 @@ var Boolzapp = new Vue ({
                     },
                     {
                         date: '28/03/2020 16:15:22',
-                        message: 'Si, basta non venga Iron Man che non lo sopporto!',
+                        message: 'Si, basta non venga Iron Man!',
+                        status: 'received'
+                    },
+                    {
+                        date: '28/03/2020 16:15:23',
+                        message: 'Non lo sopporto! XD',
                         status: 'received'
                     }
                 ],
