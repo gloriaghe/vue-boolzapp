@@ -7,6 +7,8 @@ var Boolzapp = new Vue ({
         newMessaggio: "",
         newMess: {},
         cercaAmico: "",
+        deleteMess: false,
+        canc:true,
         contacts: [
             {
                 name: 'Batman',
@@ -208,7 +210,6 @@ var Boolzapp = new Vue ({
         },
 
         cercaPerLettera () {
-            // console.log(this.contacts[1].name);
             let cErCaAmIcO = this.cercaAmico.toUpperCase();
 
             this.contacts.filter((element, i, array) =>{
@@ -218,14 +219,11 @@ var Boolzapp = new Vue ({
                 //    console.log(this.cercaAmico.toUpperCase());
                    
                 element.visible = false;
-
-
              } 
-            //else if (element.name.toUpperCase().includes(cErCaAmIcO) === true){
-            //     console.log(element.name.toUpperCase().includes(cErCaAmIcO))
-            //    }
            })
-        }
+        },
+
+        
     },
 
 });

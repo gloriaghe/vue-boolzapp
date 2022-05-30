@@ -44,7 +44,7 @@
                                 <div class="row" id="listaContatti">
                                 <div class="d-flex flex-column">
                                         <div class="contatto" v-for="(element, key, i) in contacts" @click="activeClick(key)" :class="element.visible === false ? 'none' :'' " :id="key" :key="key">
-                                                    <div :class="key === activeContact ? 'active' : '' " >
+                                                    <div :class="key === activeContact ? 'active' : '' ">
                                                         <img :src="element.avatar" :alt="element.name" class="avatarContatto">
                                                         <div class="nameMsg">
                                                             <h4 class="name">{{element.name}}</h2>
@@ -54,6 +54,7 @@
                                                         </div>
                                                         <span class="orario-msg">12.00</span>  
                                                     </div>      
+                                                    
                                         </div>
                                     </div>
                                 </div>
@@ -76,10 +77,17 @@
                             <div id="chatAperta" >
                                 <div class="row d-flex flex-column overflow-auto">
                                 
-                                    <div v-for="message in contacts[activeContact].messages" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
-                                        <div>{{message.message}}</div>
-                                        <span>{{message.date}}</span>
+                                    <div v-for="message in contacts[activeContact].messages" v-if="canc" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
+                                        <div @click="deleteMess = !deleteMess"  >
+                                            <div>{{message.message}}</div>
+                                            <span>{{message.date}}</span>
+                                        </div>
+                                        <div class="informazioniMess " v-if="deleteMess" >
+                                            <div>Informazione messaggio</div>
+                                            <div @click="canc =!canc">Cancella il messaggio</div>
+                                        </div>
                                     </div> 
+                                    
                                     <!-- <div v-for="message in currentContact.messages">{{message.message}}</div> -->
                                 </div>
                                 
