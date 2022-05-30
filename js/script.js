@@ -227,13 +227,13 @@ var Boolzapp = new Vue ({
                 //    console.log(this.cercaAmico.toUpperCase());
                    
                 element.visible = false;
-             } 
+                } else if (cErCaAmIcO === ""){
+                    element.visible = true;
+
+                }
            })
         },
 
-        // lastMessages (){
-        //     console.log(this.contacts.messages.message) 
-        // }
         
     },
 

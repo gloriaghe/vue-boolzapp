@@ -50,7 +50,7 @@
                                                             <h4 class="name">{{element.name}}</h2>
                                                             <span v-for="(elemento,key, i) in element.messages" class="last-msg">  
                                                                 <span v-if="key == element.messages.length - 1"> <strong>Ultimo sms: </strong>{{elemento.message}}</span> 
-                                                        </span>
+                                                            </span>
                                                         </div>
                                                         <span class="orario-msg">12.00</span>  
                                                     </div>      
@@ -79,14 +79,14 @@
                             <div id="chatAperta" >
                                 <div class="row d-flex flex-column overflow-auto">
                                 
-                                    <div v-for="message in contacts[activeContact].messages" v-if="canc" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
-                                        <div @click="deleteMess = !deleteMess">
+                                    <div v-for="(message, i) in contacts[activeContact].messages" v-if="canc" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
+                                        <div @click="deleteMess = !deleteMess" :keys="i">
                                             <div>{{message.message}}</div>
                                             <span>{{message.date}}</span>
                                         </div>
                                         <div class="informazioniMess" v-if="deleteMess" >
                                             <div>Informazione messaggio</div>
-                                            <div @click="canc =!canc">Cancella il messaggio</div>
+                                            <div @click="canc = !canc">Cancella il messaggio</div>
                                         </div>
                                     </div> 
                                     
