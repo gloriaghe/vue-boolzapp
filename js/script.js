@@ -234,6 +234,11 @@ var Boolzapp = new Vue ({
            })
         },
 
+        cancella(element){
+             this.contacts[this.activeContact].messages.splice(element,1);
+             
+        }
+
         
     },
 

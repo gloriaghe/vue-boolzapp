@@ -84,14 +84,15 @@
                             <div id="chatAperta" >
                                 <div class="row d-flex flex-column overflow-auto">
                                 
-                                    <div v-for="(message, i) in contacts[activeContact].messages" v-if="canc" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
+                                    <div v-for="(message, i) in contacts[activeContact].messages" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
                                         <div @click="deleteMess = !deleteMess" :keys="i">
                                             <div>{{message.message}}</div>
                                             <span>{{message.date}}</span>
                                         </div>
                                         <div class="informazioniMess" v-if="deleteMess" >
                                             <div>Informazione messaggio</div>
-                                            <div @click="canc = !canc">Cancella il messaggio</div>
+                                            <div @click="cancella(i)" @dblclick="deleteMess = !deleteMess">Cancella il messaggio</div>
+                                            <!-- <div @click="canc = !canc">Cancella il messaggio</div> -->
                                         </div>
                                     </div> 
                                     
