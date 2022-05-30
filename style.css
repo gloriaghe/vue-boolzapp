@@ -234,9 +234,6 @@
     display: none;
 }
 
-.last-msg:last-child span{
-    display: inline;
-}
 
 .last-msg {
     font-size: 12px;
