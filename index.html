@@ -47,12 +47,17 @@
                                                     <div :class="key === activeContact ? 'active' : '' ">
                                                         <img :src="element.avatar" :alt="element.name" class="avatarContatto">
                                                         <div class="nameMsg">
-                                                            <h4 class="name">{{element.name}}</h2>
-                                                            <span v-for="(elemento,key, i) in element.messages" class="last-msg">  
-                                                                <span v-if="key == element.messages.length - 1"> <strong>Ultimo sms: </strong>{{elemento.message}}</span> 
-                                                            </span>
+                                                            <div>
+                                                                <h4>{{element.name}}</h2>
+                                                                    <span v-for="(elemento,key, i) in element.messages" class="last-msg">  
+                                                                        <span v-if="key == element.messages.length - 1"> <strong>Ultimo sms: </strong>{{elemento.message}}</span> 
+                                                                    </span>
+                                                            </div>
+                                                        
                                                         </div>
-                                                        <span class="orario-msg">12.00</span>  
+                                                        <span class="orarioLastMsg" v-for="(elemento,key, i) in element.messages" >  
+                                                            <span v-if="key == element.messages.length - 1" >{{elemento.date}}</span>  
+                                                        </span>
                                                     </div>      
                                                     
                                         </div>

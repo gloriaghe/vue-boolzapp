@@ -96,9 +96,10 @@
 
 .nameMsg {
     margin-left: 20px;
+    max-width: 50%;
 }
 
-.contatto .orario-msg{
+.contatto .orarioLastMsg{
     color: #b1b1b1;
     font-size: 12px;
     margin-right: 10px;
