@@ -211,15 +211,16 @@ var Boolzapp = new Vue ({
             // console.log(this.contacts[1].name);
             let cErCaAmIcO = this.cercaAmico.toUpperCase();
 
-            this.contacts.filter((element) =>{
+            this.contacts.filter((element,i, array) =>{
                if(element.name.toUpperCase().includes(cErCaAmIcO) === false){
-                this.contacts.splice(element, 1)
-                
-                //    console.log(element.name.toUpperCase().includes(cErCaAmIcO))
-                //    console.log(this.cercaAmico.toUpperCase())
                    
-               } else {
+                   console.log(element.name.toUpperCase().includes(cErCaAmIcO))
+                   console.log(this.cercaAmico.toUpperCase())
                    
+                   this.contacts.splice(element, 1)
+               } else if (element.name.toUpperCase().includes(cErCaAmIcO) === true){
+                console.log(element.name.toUpperCase().includes(cErCaAmIcO))
+
                }
            })
         }
