@@ -211,17 +211,19 @@ var Boolzapp = new Vue ({
             // console.log(this.contacts[1].name);
             let cErCaAmIcO = this.cercaAmico.toUpperCase();
 
-            this.contacts.filter((element,i, array) =>{
+            this.contacts.filter((element, i, array) =>{
                if(element.name.toUpperCase().includes(cErCaAmIcO) === false){
                    
-                   console.log(element.name.toUpperCase().includes(cErCaAmIcO))
-                   console.log(this.cercaAmico.toUpperCase())
+                //    console.log(element.name.toUpperCase().includes(cErCaAmIcO));
+                //    console.log(this.cercaAmico.toUpperCase());
                    
-                   this.contacts.splice(element, 1)
-               } else if (element.name.toUpperCase().includes(cErCaAmIcO) === true){
-                console.log(element.name.toUpperCase().includes(cErCaAmIcO))
+                element.visible = false;
 
-               }
+
+             } 
+            //else if (element.name.toUpperCase().includes(cErCaAmIcO) === true){
+            //     console.log(element.name.toUpperCase().includes(cErCaAmIcO))
+            //    }
            })
         }
     },

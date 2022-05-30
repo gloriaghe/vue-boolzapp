@@ -43,15 +43,17 @@
                             <div id="contenutoContatti">
                                 <div class="row" id="listaContatti">
                                 <div class="d-flex flex-column">
-                                        <div class="contatto" v-for="(element, key, i) in contacts" @click="activeClick(key)" :class="key === activeContact ? 'active' : '' " :id="key" :key="key">
-                                                    <img :src="element.avatar" :alt="element.name" class="avatarContatto">
-                                                    <div class="nameMsg">
-                                                        <h4 class="name">{{element.name}}</h2>
-                                                        <span v-for="element in element.messages" class="last-msg">   
-                                                        <!-- {{element.message}} -->
-                                                        </span>
-                                                    </div>
-                                                    <span class="orario-msg">12.00</span>        
+                                        <div class="contatto" v-for="(element, key, i) in contacts" @click="activeClick(key)" :class="element.visible === false ? 'none' :'' " :id="key" :key="key">
+                                                    <div :class="key === activeContact ? 'active' : '' " >
+                                                        <img :src="element.avatar" :alt="element.name" class="avatarContatto">
+                                                        <div class="nameMsg">
+                                                            <h4 class="name">{{element.name}}</h2>
+                                                            <span v-for="element in element.messages" class="last-msg">   
+                                                            <!-- {{element.message}} -->
+                                                            </span>
+                                                        </div>
+                                                        <span class="orario-msg">12.00</span>  
+                                                    </div>      
                                         </div>
                                     </div>
                                 </div>
