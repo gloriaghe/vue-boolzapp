@@ -32,28 +32,7 @@ var Boolzapp = new Vue ({
                     }
                 ],
             },
-            {
-                name: 'Capitan America',
-                avatar: 'img/CapitanAmerica.jpg',
-                visible: true,
-                messages: [
-                    {
-                        date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Stasera ci vediamo?',
-                        status: 'received'
-                    },
-                    {
-                        date: '20/03/2020 16:35:00',
-                        message: 'Mi piacerebbe ma devo andare a sconfiggere il crimine.',
-                        status: 'sent'
-                    }
-                ],
-            },
+           
             {
                 name: 'Wonder Woman',
                 avatar: 'img/Wonderwoman.jpg',
@@ -175,10 +154,34 @@ var Boolzapp = new Vue ({
                         status: 'sent'
                     }
                 ],
+            },
+            {
+                name: 'Capitan America',
+                avatar: 'img/CapitanAmerica.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Hey, tutto bene?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Si, sono appena tornato dalla missione....',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: 'Ottimo. Riposati!',
+                        status: 'sent'
+                    }
+                ],
             }
         ],
     },
-
+    created(){
+        
+    },
     methods:{
         //collegare chat aperta
         activeClick(attivaMsg){
@@ -223,6 +226,9 @@ var Boolzapp = new Vue ({
            })
         },
 
+        // lastMessages (){
+        //     console.log(this.contacts.messages.message) 
+        // }
         
     },
 

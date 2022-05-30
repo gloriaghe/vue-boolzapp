@@ -42,14 +42,16 @@
                             <input type="text" id="cercaContatto" v-model="cercaAmico" @keyup.enter="cercaPerLettera()" placeholder="Cerca o inizia una nuova Chat">
                             <div id="contenutoContatti">
                                 <div class="row" id="listaContatti">
-                                <div class="d-flex flex-column">
+                                <div class="d-flex flex-column ">
                                         <div class="contatto" v-for="(element, key, i) in contacts" @click="activeClick(key)" :class="element.visible === false ? 'none' :'' " :id="key" :key="key">
                                                     <div :class="key === activeContact ? 'active' : '' ">
                                                         <img :src="element.avatar" :alt="element.name" class="avatarContatto">
                                                         <div class="nameMsg">
                                                             <h4 class="name">{{element.name}}</h2>
-                                                            <span v-for="element in element.messages" class="last-msg">   
-                                                            <!-- {{element.message}} -->
+                                                            <span v-for="element in element.messages" class="last-msg">  
+                                                                    <span class="none"> <strong>Ultimo sms:</strong> {{element.message}}</span> 
+                                                                 
+                                                                
                                                             </span>
                                                         </div>
                                                         <span class="orario-msg">12.00</span>  
@@ -82,7 +84,7 @@
                                             <div>{{message.message}}</div>
                                             <span>{{message.date}}</span>
                                         </div>
-                                        <div class="informazioniMess " v-if="deleteMess" >
+                                        <div class="informazioniMess" v-if="deleteMess" >
                                             <div>Informazione messaggio</div>
                                             <div @click="canc =!canc">Cancella il messaggio</div>
                                         </div>
