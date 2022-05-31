@@ -231,9 +231,10 @@ var Boolzapp = new Vue ({
              
                 scrive.classList.remove("none");
                 let onlineAmico = document.getElementById("online");
-                
-                
+                ultimoAccesso.classList.add("none");
+
                 setTimeout(( )=>{
+
                     scrive.classList.add("none");
 
                     setTimeout(( )=>{
