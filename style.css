@@ -1,7 +1,7 @@
 #containerApp {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to right, #007468, #06ffe6 );
+    background-image: linear-gradient(to top,  #b9eee8, #007468 );
     background-color: #06ffe6;
     display: flex;
     justify-content: center;

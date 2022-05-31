@@ -89,7 +89,7 @@
                                             <div>{{message.message}}</div>
                                             <span>{{message.date}}</span>
                                         </div>
-                                        <div class="informazioniMess" v-if="deleteMess" >
+                                        <div class="informazioniMess" v-if="deleteMess">
                                             <div>Informazione messaggio</div>
                                             <div @click="cancella(i)" @dblclick="deleteMess = !deleteMess">Cancella il messaggio</div>
                                             <!-- <div @click="canc = !canc">Cancella il messaggio</div> -->
@@ -103,7 +103,8 @@
                             <div id="rispondi">
                                 <i class="fas fa-smile"></i>
                                 <input type="text" v-model="newMessaggio" @keyup.enter="messAdd" placeholder="Scrivi un messaggio">
-                                <i class="fas fa-microphone"></i>
+                                <i v-if="newMessaggio == ''" class="fas fa-microphone"></i>
+                                <i v-else id="airplane" @click="messAdd" class="fas fa-plane "></i>
                             </div>
         
                         </section>
