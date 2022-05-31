@@ -11,16 +11,19 @@
 
 #app {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     height: 60%;
     background-color: white;
+    --bs-gutter-x: 0;
 }
 
 /* section messaggistica */
 
  /* avatar utente  e contatti*/
  #contatti{
-    height: 90%;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
  .contatto img,
@@ -36,7 +39,11 @@
     display: flex;
     justify-content: space-between;
     height: 70px;
+    width: 33%;
     cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
  }
  
  #avatar h4{
@@ -73,11 +80,7 @@
 }
 
  /* contatti */
- #contenutoContatti{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height:70vh;
- }
+ 
 
 .contatto{
     min-height:70px;
@@ -115,7 +118,7 @@
     align-items: center;
     font-size: 13px;
     height: 80px;
-    margin-left: -12px;
+    margin-top: 70px;
 }
 
 #notifiche .fas {
@@ -141,6 +144,10 @@
 #messaggi {
     background-image: url(img/sfondo.jpg);
     background-size: cover;
+    
+    height: 80vh;
+    position: relative;
+
 }
 
 #contattoChatAperta{
@@ -152,9 +159,9 @@
 }
 
 #chatAperta {
+    height: calc(100% - 140px);
     overflow-y: scroll;
     overflow-x: hidden;
-    height: calc(100% - 140px);
 }
 
 #nomeChatAperta{
@@ -181,6 +188,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+     z-index: 200;
+    /* position: fixed;
+    bottom: 0;
+    right: 0; */
 }
 
 #rispondi input {
