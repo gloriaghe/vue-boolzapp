@@ -9,6 +9,12 @@ var Boolzapp = new Vue ({
         cercaAmico: "",
         deleteMess: false,
         canc:true,
+        phrases: [
+            "Ok",
+            "Chiamo gli altri",
+            "Stasera sarà dura",
+            "Il mondo è di nuovo salvo!"
+        ],
         contacts: [
             {
                 name: 'Batman',
@@ -196,6 +202,7 @@ var Boolzapp = new Vue ({
         },
 
          // aggiunta messaggio
+         
          messAdd (){
             class newMess {
                 constructor (message, date, status){
@@ -209,9 +216,12 @@ var Boolzapp = new Vue ({
                   let nuovo = new newMess(this.newMessaggio.trim(), "29 maggio 21.00", "sent");
                   this.contacts[this.activeContact].messages.push(nuovo);
                   this.newMessaggio = "";
+                  
+                  let fraseACaso = this.phrases[ Math.floor( Math.random() * this.phrases.length ) ]
+
                   setTimeout(( )=>{
 
-                      let risposta = new newMess("Ok", "29 maggio 21.00", "received");
+                      let risposta = new newMess(fraseACaso, "29 maggio 21.00", "received");
                       this.contacts[this.activeContact].messages.push(risposta);
                   },1000)
              }
@@ -237,8 +247,10 @@ var Boolzapp = new Vue ({
         cancella(element){
              this.contacts[this.activeContact].messages.splice(element,1);
              
-        }
+        },
 
+        
+       
         
     },
 
