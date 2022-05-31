@@ -10,7 +10,7 @@ var Boolzapp = new Vue ({
         deleteMess: false,
         canc:true,
         phrases: [
-            "Ok",
+            "Super!",
             "Chiamo gli altri",
             "Stasera sarà dura",
             "Il mondo è di nuovo salvo!"
@@ -22,17 +22,17 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: 'Tue, 31 May 2022 9:15:53 GMT',
                         message: 'Hai portato a spasso il cane di Catwoman?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Tue, 31 May 2022 9:18:53 GMT',
                         message: 'Ricordati di arrestare Pinguino stasera!!!',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 16:15:22',
+                        date: 'Tue, 31 May 2022 10:15:53 GMT',
                         message: 'Tutto fatto! Gotham City è al sicuro anche oggi',
                         status: 'received'
                     }
@@ -45,22 +45,22 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '28/03/2020 10:10:40',
+                        date: 'Tue, 31 May 2022 9:15:53 GMT',
                         message: 'Stasera si esce?',
                         status: 'received'
                     },
                     {
-                        date: '28/03/2020 10:20:10',
+                        date: 'Tue, 31 May 2022 9:17:53 GMT',
                         message: 'Volentieri... Invitiamo anche gli altri?',
                         status: 'sent'
                     },
                     {
-                        date: '28/03/2020 16:15:22',
+                        date: 'Tue, 31 May 2022 11:15:53 GMT',
                         message: 'Si, basta non venga Iron Man!',
                         status: 'received'
                     },
                     {
-                        date: '28/03/2020 16:15:23',
+                        date: 'Tue, 31 May 2022 12:15:53 GMT',
                         message: 'Non lo sopporto! XD',
                         status: 'received'
                     }
@@ -72,17 +72,17 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: 'Mon, 30 May 2022 9:15:53 GMT',
                         message: 'Stasera giretto?',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Mon, 30 May 2022 10:15:53 GMT',
                         message: 'No, corri troppo!',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Mon, 30 May 2022 10:35:53 GMT',
                         message: 'Ahahahaha!',
                         status: 'received'
                     }
@@ -94,12 +94,12 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: 'Sun, 29 May 2022 19:15:53 GMT',
                         message: 'Ricordati di chiamare Batman...',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Sun, 29 May 2022 20:15:53 GMT',
                         message: 'Va bene! Stasera comunque ci si vede alla base.',
                         status: 'received'
                     }
@@ -111,17 +111,17 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: 'Tue, 31 May 2022 19:15:53 GMT',
                         message: 'Ciao stasera vedi gli altri?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Tue, 31 May 2022 19:35:53 GMT',
                         message: 'Si, alle 20.00 nella fortezza di Superman',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:51:00',
+                        date: 'Tue, 31 May 2022 19:36:53 GMT',
                         message: 'Perfetto!',
                         status: 'sent'
                     }
@@ -133,12 +133,12 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: 'Tue, 31 May 2022 9:15:53 GMT',
                         message: 'Tutto bene durante la battaglia?!',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Tue, 31 May 2022 10:15:53 GMT',
                         message: 'Certo, non mi batte nessuno!',
                         status: 'received'
                     }
@@ -150,17 +150,17 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: 'Tue, 31 May 2022 12:15:53 GMT',
                         message: 'Hey, che si dice?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Tue, 31 May 2022 13:15:53 GMT',
                         message: 'Niente di che... anche stavolta ci hanno provato con la criptonite',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:51:00',
+                        date: 'Tue, 31 May 2022 13:25:53 GMT',
                         message: 'Va beh dai... Ormai sei abituato!!',
                         status: 'sent'
                     }
@@ -172,17 +172,17 @@ var Boolzapp = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: 'Mon, 30 May 2022 8:15:53 GMT',
                         message: 'Hey, tutto bene?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: 'Mon, 30 May 2022 9:15:53 GMT',
                         message: 'Si, sono appena tornato dalla missione....',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:51:00',
+                        date: 'Mon, 30 May 2022 9:20:53 GMT',
                         message: 'Ottimo. Riposati!',
                         status: 'sent'
                     }
@@ -213,18 +213,30 @@ var Boolzapp = new Vue ({
                 }
             };
              if(this.newMessaggio.trim() !== ""){
-                  let nuovo = new newMess(this.newMessaggio.trim(), "29 maggio 21.00", "sent");
-                  this.contacts[this.activeContact].messages.push(nuovo);
-                  this.newMessaggio = "";
+
+                var now = dayjs();
+                let nuovo = new newMess(this.newMessaggio.trim(), now, "sent");
+                this.contacts[this.activeContact].messages.push(nuovo);
+                this.newMessaggio = "";
                   
-                  let fraseACaso = this.phrases[ Math.floor( Math.random() * this.phrases.length ) ]
+                let fraseACaso = this.phrases[ Math.floor( Math.random() * this.phrases.length ) ]
+                let scrive = document.getElementById("staScrivendo");
+                let ultimoAccesso = document.getElementById("accesso");
 
-                  setTimeout(( )=>{
 
-                      let risposta = new newMess(fraseACaso, "29 maggio 21.00", "received");
-                      this.contacts[this.activeContact].messages.push(risposta);
-                  },1000)
-             }
+                setTimeout(( )=>{
+                    var nowRisposta = dayjs();
+                    let risposta = new newMess(fraseACaso, nowRisposta, "received");
+                    this.contacts[this.activeContact].messages.push(risposta);
+                    setTimeout(( )=>{
+                        ultimoAccesso.classList.add("none");
+                        scrive.classList.remove("none")
+                    },1000)
+                },1000)
+
+                scrive.classList.add("none")
+
+            }
         },
 
         cercaPerLettera () {

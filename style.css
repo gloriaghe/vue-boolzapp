@@ -11,7 +11,7 @@
 
 #app {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     height: 60%;
     background-color: white;
     --bs-gutter-x: 0;
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     height: 70px;
-    width: 29%;
+    width: 33%;
     cursor: pointer;
     position: fixed;
     z-index: 100;
@@ -107,6 +107,7 @@
     font-size: 12px;
     margin-right: 10px;
     float: right;
+    width: 20%;
 }
 
 /* notifiche */
@@ -165,7 +166,7 @@
 }
 
 #nomeChatAperta{
-    min-width: 50%;
+    min-width: 70%;
     margin-left: 20px;
 }
 
@@ -189,9 +190,6 @@
     justify-content: space-around;
     align-items: center;
      z-index: 200;
-    /* position: fixed;
-    bottom: 0;
-    right: 0; */
 }
 
 #rispondi input {
