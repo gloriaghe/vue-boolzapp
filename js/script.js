@@ -8,7 +8,7 @@ var Boolzapp = new Vue ({
         newMess: {},
         cercaAmico: "",
         deleteMess: false,
-        canc:true,
+        canc: true,
         phrases: [
             "Super!",
             "Chiamo gli altri",
@@ -214,29 +214,48 @@ var Boolzapp = new Vue ({
             };
              if(this.newMessaggio.trim() !== ""){
 
+                //data e ora messaggio
                 var now = dayjs();
+
+                //nuovo messaggio
                 let nuovo = new newMess(this.newMessaggio.trim(), now, "sent");
                 this.contacts[this.activeContact].messages.push(nuovo);
                 this.newMessaggio = "";
                   
+                //aggiunta frasi random
                 let fraseACaso = this.phrases[ Math.floor( Math.random() * this.phrases.length ) ]
+                
+                //id su HTML 
                 let scrive = document.getElementById("staScrivendo");
                 let ultimoAccesso = document.getElementById("accesso");
+             
+                scrive.classList.remove("none");
+                let onlineAmico = document.getElementById("online");
+                
+                
+                setTimeout(( )=>{
+                    scrive.classList.add("none");
+
+                    setTimeout(( )=>{
+                        var nowRisposta = dayjs();
+                        let risposta = new newMess(fraseACaso, nowRisposta, "received");
+                        this.contacts[this.activeContact].messages.push(risposta);
+                
+                    });
+                },2000);
 
 
                 setTimeout(( )=>{
-                    var nowRisposta = dayjs();
-                    let risposta = new newMess(fraseACaso, nowRisposta, "received");
-                    this.contacts[this.activeContact].messages.push(risposta);
-                    setTimeout(( )=>{
-                        ultimoAccesso.classList.add("none");
-                        scrive.classList.remove("none")
-                    },1000)
-                },1000)
+                    onlineAmico.classList.remove("none");
+                },2000);
 
-                scrive.classList.add("none")
-
+                setTimeout(( )=>{
+                    onlineAmico.classList.add("none");
+                },6000)
+          
             }
+        
+
         },
 
         cercaPerLettera () {

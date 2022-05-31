@@ -73,7 +73,8 @@
                                     <h4>{{contacts[activeContact].name}}</h4>
                                     <span v-for="(message, key) in contacts[activeContact].messages" >
                                         <span class="none" id="staScrivendo">Sta scrivendo...</span>
-                                        <span class="" id="accesso" v-if="key == contacts[activeContact].messages.length - 1">Ultimo accesso il {{message.date}}</span>
+                                        <span class="none" id="online">Online</span>
+                                        <span id="accesso" v-if="key == contacts[activeContact].messages.length - 1">Ultimo accesso il {{message.date}}</span>
                                     </span>
                                 </div>
                                 <div id="iconChatAperta">
