@@ -28,8 +28,14 @@
                                 </div>
                                 <div id="iconAvatar">
                                     <i class="fas fa-circle-notch"></i>
-                                    <i class="fas fa-comment-alt"></i>
+                                    <i @click="newContact = !newContact" class="fas fa-comment-alt"></i>
                                     <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                                <div v-if="newContact" id="newContact">
+                                    <div>Aggiungi un nuovo Amico:</div>
+                                    <input v-model="nomeAmico" id="inputText" type="text" placeholder="Inserisci nome utente">
+                                    <input v-model="fotoAmico"type="text" placeholder="Inserisci foto utente">
+                                    <button @click="creiamoChatNuova()">Crea Chat</button>
                                 </div>
                             </div>
                             <div id="notifiche">

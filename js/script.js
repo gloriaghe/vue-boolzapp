@@ -1,15 +1,23 @@
-var Boolzapp = new Vue ({
+var Boolzapp = new Vue({
     el: '#containerApp',
-    data:{
-        lastMessages : "",
+    data: {
+        lastMessages: "",
         activeContact: 0,
-        currentContact : {},
+        currentContact: {},
         newMessaggio: "",
         newMess: {},
         cercaAmico: "",
+
+        //scomparsa
         deleteMess: false,
         deleteChat: false,
         canc: true,
+        newContact: false,
+
+        //nuovo contatto
+        nomeAmico: "",
+        fotoAmico: "",
+
         phrases: [
             "Super!",
             "Chiamo gli altri",
@@ -39,7 +47,7 @@ var Boolzapp = new Vue ({
                     }
                 ],
             },
-           
+
             {
                 name: 'Wonder Woman',
                 avatar: 'img/Wonderwoman.jpg',
@@ -191,29 +199,29 @@ var Boolzapp = new Vue ({
             }
         ],
     },
-    created(){
-        
+    created() {
+
     },
-    methods:{
+    methods: {
         //collegare chat aperta
-        activeClick(attivaMsg){
+        activeClick(attivaMsg) {
             this.activeContact = attivaMsg;
             // this.currentContact = this.contacts[attivaMsg];
 
         },
 
-         // aggiunta messaggio
-         
-         messAdd (){
+        // aggiunta messaggio
+
+        messAdd() {
             class newMess {
-                constructor (message, date, status){
+                constructor(message, date, status) {
                     this.date = date;
                     this.message = message;
                     this.status = status;
 
                 }
             };
-             if(this.newMessaggio.trim() !== ""){
+            if (this.newMessaggio.trim() !== "") {
 
                 //data e ora messaggio
                 var now = dayjs();
@@ -222,10 +230,10 @@ var Boolzapp = new Vue ({
                 let nuovo = new newMess(this.newMessaggio.trim(), now, "sent");
                 this.contacts[this.activeContact].messages.push(nuovo);
                 this.newMessaggio = "";
-                  
+
                 //aggiunta frasi random
-                let fraseACaso = this.phrases[ Math.floor( Math.random() * this.phrases.length ) ]
-                
+                let fraseACaso = this.phrases[Math.floor(Math.random() * this.phrases.length)]
+
                 //id su HTML 
                 let scrive = document.getElementById("staScrivendo");
                 // let ultimoAccesso = document.getElementById("accesso");
@@ -233,63 +241,82 @@ var Boolzapp = new Vue ({
 
                 let onlineAmico = document.getElementById("online");
                 // ultimoAccesso.classList.add("none");
-                setTimeout(( )=>{
+                setTimeout(() => {
 
                     scrive.classList.add("none");
 
-                    setTimeout(( )=>{
+                    setTimeout(() => {
                         var nowRisposta = dayjs();
                         let risposta = new newMess(fraseACaso, nowRisposta, "received");
                         this.contacts[this.activeContact].messages.push(risposta);
-                
+
                     });
-                },2000);
+                }, 2000);
 
 
-                setTimeout(( )=>{
+                setTimeout(() => {
                     onlineAmico.classList.remove("none");
-                },2000);
+                }, 2000);
 
-                setTimeout(( )=>{
+                setTimeout(() => {
                     onlineAmico.classList.add("none");
-                },6000)
-          
+                }, 6000)
+
             }
-        
+
 
         },
 
-        cercaPerLettera () {
+        cercaPerLettera() {
             let cErCaAmIcO = this.cercaAmico.toUpperCase();
 
-            this.contacts.filter((element, i, array) =>{
-               if(element.name.toUpperCase().includes(cErCaAmIcO) === false){
-                   
-                //    console.log(element.name.toUpperCase().includes(cErCaAmIcO));
-                //    console.log(this.cercaAmico.toUpperCase());
-                   
-                element.visible = false;
-                } else if (cErCaAmIcO === ""){
+            this.contacts.filter((element, i, array) => {
+                if (element.name.toUpperCase().includes(cErCaAmIcO) === false) {
+
+                    //    console.log(element.name.toUpperCase().includes(cErCaAmIcO));
+                    //    console.log(this.cercaAmico.toUpperCase());
+
+                    element.visible = false;
+                } else if (cErCaAmIcO === "") {
                     element.visible = true;
 
                 }
-           })
+            })
         },
 
-        cancella(element){
-             this.contacts[this.activeContact].messages.splice(element,1);
-             
+        cancella(element) {
+            this.contacts[this.activeContact].messages.splice(element, 1);
+
         },
 
-        deleteMessaggi(element){
+        deleteMessaggi(element) {
             this.contacts[this.activeContact].messages.splice(element);
 
         },
-        deleteChatIntera(contacts){
-            this.contacts.splice(this.activeContact,1);
 
-        }
-        
-    },
+        deleteChatIntera(contacts) {
+            this.contacts.splice(this.activeContact, 1);
 
+        },
+
+        creiamoChatNuova() {
+            class newAmico {
+                constructor(name, avatar, visible, messages) {
+                    this.name = name;
+                    this.avatar = avatar;
+                    this.visible = visible;
+                    this.messages = messages
+                }
+            };
+
+            if (this.nomeAmico.trim() !== "" && this.fotoAmico.trim() !== "") {
+                let nuovoFriend = new newAmico(this.nomeAmico.trim(), this.fotoAmico.trim(), "visible", []);
+                this.contacts.push(nuovoFriend);
+                this.nomeAmico = "";
+                this.fotoAmico = "";
+                this.newContact= false;
+
+            };
+        },
+    }
 });
