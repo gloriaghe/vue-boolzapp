@@ -8,6 +8,7 @@ var Boolzapp = new Vue ({
         newMess: {},
         cercaAmico: "",
         deleteMess: false,
+        deleteChat: false,
         canc: true,
         phrases: [
             "Super!",
@@ -227,12 +228,11 @@ var Boolzapp = new Vue ({
                 
                 //id su HTML 
                 let scrive = document.getElementById("staScrivendo");
-                let ultimoAccesso = document.getElementById("accesso");
-             
+                // let ultimoAccesso = document.getElementById("accesso");
                 scrive.classList.remove("none");
-                let onlineAmico = document.getElementById("online");
-                ultimoAccesso.classList.add("none");
 
+                let onlineAmico = document.getElementById("online");
+                // ultimoAccesso.classList.add("none");
                 setTimeout(( )=>{
 
                     scrive.classList.add("none");
@@ -281,8 +281,14 @@ var Boolzapp = new Vue ({
              
         },
 
-        
-       
+        deleteMessaggi(element){
+            this.contacts[this.activeContact].messages.splice(element);
+
+        },
+        deleteChatIntera(contacts){
+            this.contacts.splice(this.activeContact,1);
+
+        }
         
     },
 

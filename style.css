@@ -33,12 +33,13 @@
      width: 60px;
      height: 60px;
      border-radius: 50%;
+     margin-left: 5px;
  }
 
  #avatar{
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
     width: 33%;
     cursor: pointer;
     position: fixed;
@@ -65,7 +66,7 @@
 
 /* cerca */
 #cercaContatto{
-    width: 90%;
+    width: 100%;
     border: none;
     height: 50px;
     background-image: url(img/lens.svg);
@@ -77,6 +78,7 @@
 
 #cercaContatto:focus {
     background-image: none;
+    width: 99%;
 }
 
  /* contatti */
@@ -119,7 +121,7 @@
     align-items: center;
     font-size: 13px;
     height: 80px;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 #notifiche .fas {
@@ -153,14 +155,14 @@
 
 #contattoChatAperta{
     background-color: white;
-    height: 70px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 #chatAperta {
-    height: calc(100% - 140px);
+    height: calc(100% - 150px);
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -239,6 +241,14 @@
     padding: 15px;
     z-index: 10;
     font-size: 13px;
+}
+
+.informazioniChat{
+    top:80px;
+    right:20px;
+    left:60px;
+    border: none;
+
 }
 
 .none {

@@ -74,19 +74,24 @@
                                     <span v-for="(message, key) in contacts[activeContact].messages" >
                                         <span class="none" id="staScrivendo">Sta scrivendo...</span>
                                         <span class="none" id="online">Online</span>
-                                        <span id="accesso" v-if="key == contacts[activeContact].messages.length - 1">Ultimo accesso il {{message.date}}</span>
+                                        <span v-if="key == contacts[activeContact].messages.length - 1">Ultimo accesso il {{message.date}}</span>
                                     </span>
                                 </div>
                                 <div id="iconChatAperta">
                                     <i class="fas fa-search"></i>
                                     <i class="fas fa-paperclip"></i>
-                                    <i class="fas fa-ellipsis-v"></i>
+                                    <i @click="deleteChat = !deleteChat" class="fas fa-ellipsis-v"></i>
+                                    <div class="informazioniMess informazioniChat" v-if="deleteChat">
+                                        <div @click="deleteChatIntera()">- Cancella chat</div>
+                                        <div @click="deleteMessaggi(i)">- Cancella i messaggi</div>
+                                        <!-- <div @click="canc = !canc">Cancella il messaggio</div> -->
+                                    </div>
                                 </div>
                             </div>
                             <div id="chatAperta" >
                                 <div  class="row d-flex flex-column overflow-auto">
                                 
-                                    <div v-for="(message, i) in contacts[activeContact].messages" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
+                                    <div v-for="(message, i,) in contacts[activeContact].messages" class="col-4 msg" :class="message.status === 'sent' ? 'msgInviati' : ''">
                                         <div @click="deleteMess = !deleteMess" :keys="i">
                                             <div>{{message.message}}</div>
                                             <span>{{message.date}}</span>
