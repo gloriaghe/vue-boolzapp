@@ -17,7 +17,7 @@ var Boolzapp = new Vue({
         //nuovo contatto
         nomeAmico: "",
         fotoAmico: "",
-
+        splashPage: true,
         phrases: [
             "Super!",
             "Chiamo gli altri",
@@ -199,9 +199,13 @@ var Boolzapp = new Vue({
             }
         ],
     },
-    created() {
-
+    mounted() {
+        setTimeout(() => {
+            this.splashPage = false;
+        }, 1000);
     },
+
+
     methods: {
         //collegare chat aperta
         activeClick(attivaMsg) {
@@ -315,7 +319,7 @@ var Boolzapp = new Vue({
                 this.nomeAmico = "";
                 this.fotoAmico = "";
                 this.newContact= false;
-
+            
             };
         },
     }

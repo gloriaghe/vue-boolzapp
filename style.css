@@ -1,11 +1,12 @@
 #containerApp {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to top,  #b9eee8, #007468 );
+    background-image: linear-gradient(to top, #b9eee8, #007468);
     background-color: #06ffe6;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 
@@ -15,28 +16,29 @@
     height: 60%;
     background-color: white;
     --bs-gutter-x: 0;
+    
 }
 
 /* section messaggistica */
 
- /* avatar utente  e contatti*/
- #contatti{
+/* avatar utente  e contatti*/
+#contatti {
     height: 80vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
- .contatto img,
- #avatar img,
- #contattoChatAperta img{
-     background-color: white;
-     width: 60px;
-     height: 60px;
-     border-radius: 50%;
-     margin-left: 5px;
- }
+.contatto img,
+#avatar img,
+#contattoChatAperta img {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
 
- #avatar{
+#avatar {
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -45,34 +47,34 @@
     position: fixed;
     z-index: 100;
     background-color: white;
- }
- 
- #avatar h4{
-    margin-left: 20px;
- }
+}
 
- #avatar:first-child div {
+#avatar h4 {
+    margin-left: 20px;
+}
+
+#avatar:first-child div {
     display: flex;
     justify-content: flex-start;
     align-items: center;
- }
+}
 
- #iconAvatar i{
+#iconAvatar i {
     cursor: pointer;
     color: #b1b1b1;
     margin-right: 20px;
     font-size: 22px;
- }
+}
 
 /* cerca */
-#cercaContatto{
+#cercaContatto {
     width: 100%;
     border: none;
     height: 50px;
     background-image: url(img/lens.svg);
     background-repeat: no-repeat;
     background-size: 20px;
-    background-position:  20px;
+    background-position: 20px;
     text-align: center;
 }
 
@@ -81,21 +83,22 @@
     width: 99%;
 }
 
- /* contatti */
- 
+/* contatti */
 
-.contatto{
-    min-height:70px;
+
+.contatto {
+    min-height: 70px;
     border-top: 1px solid #ccc;
 }
 
-.contatto:after{
+.contatto:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.avatarContatto, .nameMsg {
+.avatarContatto,
+.nameMsg {
     float: left;
 }
 
@@ -104,7 +107,7 @@
     max-width: 50%;
 }
 
-.contatto .orarioLastMsg{
+.contatto .orarioLastMsg {
     color: #b1b1b1;
     font-size: 12px;
     margin-right: 10px;
@@ -133,12 +136,12 @@
     padding: 15px;
 }
 
-#notifiche h5{
+#notifiche h5 {
     font-size: 15px;
     font-weight: bold;
 }
 
-#notifiche a{
+#notifiche a {
     color: rgb(100, 100, 100);
 }
 
@@ -147,13 +150,13 @@
 #messaggi {
     background-image: url(img/sfondo.jpg);
     background-size: cover;
-    
+
     height: 80vh;
     position: relative;
 
 }
 
-#contattoChatAperta{
+#contattoChatAperta {
     background-color: white;
     height: 80px;
     display: flex;
@@ -167,12 +170,12 @@
     overflow-x: hidden;
 }
 
-#nomeChatAperta{
+#nomeChatAperta {
     min-width: 70%;
     margin-left: 20px;
 }
 
-#iconChatAperta .fas{
+#iconChatAperta .fas {
     cursor: pointer;
     color: #b1b1b1;
     margin-right: 10px;
@@ -180,18 +183,18 @@
 }
 
 
-#iconChatAperta img{
+#iconChatAperta img {
     color: #b1b1b1;
     width: 20px;
 }
 
-#rispondi{
+#rispondi {
     height: 70px;
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-     z-index: 200;
+    z-index: 200;
 }
 
 #rispondi input {
@@ -201,14 +204,15 @@
 
 #rispondi .fas {
     color: #6b7376;
-    font-size: 20px;}
+    font-size: 20px;
+}
 
 
-.active{
+.active {
     background-color: #d3effc;
-    }
+}
 
-.msg{
+.msg {
     border-radius: 20px;
     margin: 5px 30px;
     padding: 20px;
@@ -219,7 +223,7 @@
     position: relative;
 }
 
-.msgInviati{
+.msgInviati {
     background-color: #d5f9ba;
     align-self: flex-end;
 }
@@ -232,7 +236,7 @@
 }
 
 
-.informazioniMess{
+.informazioniMess {
     border: 1px solid black;
     background-color: rgba(255, 255, 255);
     cursor: pointer;
@@ -243,10 +247,10 @@
     font-size: 13px;
 }
 
-.informazioniChat{
-    top:80px;
-    right:0px;
-    left:0px;
+.informazioniChat {
+    top: 80px;
+    right: 0px;
+    left: 0px;
     border: none;
 
 }
@@ -274,10 +278,33 @@
     flex-direction: column;
 }
 
-#newContact #inputText{
+#newContact #inputText {
     margin: 15px 0;
 }
 
-#newContact button{
+#newContact button {
     margin: 15px 0;
+}
+
+#splashP{
+    width: 80%;
+    height: 80%;
+    background-size: cover ;
+    background-image: url(http://cdn2.hubspot.net/hub/1842135/file-3900278471-jpg/blog-files/chats.jpg);
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#splashP div{
+    color: #007468;
+    font-size: 100px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
